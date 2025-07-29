@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Meu Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      padding: 40px 20px 10px;
+    }
+    h1 {
+      font-size: 2.2em;
+      font-weight: 600;
+    }
+    .contador {
+      font-size: 1.2em;
+      margin: 20px 0 40px;
+    }
+    .mensagem {
+      font-style: italic;
+      font-size: 1.3em;
+      margin: 30px auto;
+      max-width: 600px;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 30px 10px;
+    }
+    .galeria img {
+      width: 280px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      margin: 50px 0 20px;
+      font-size: 1em;
+      color: #777;
+    }
+    audio {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meu Xuxuzinho 🤍</h1>
+    <div class="contador" id="contador"></div>
+  </header>
+
+
+  <section class="galeria">
+    <img src="https://drive.google.com/uc?export=view&id=1jT2ekUYj0juqyX5qCcgK2rgXz3yVGo3w" />
+    <img src="https://drive.google.com/uc?export=view&id=1jY3_NuQF241AA0k2Ngdmqsex2BGK20Qo" />
+    <img src="https://drive.google.com/uc?export=view&id=1j_LRNDvlmSl_4bcCOXACxpsY6ZDWsKvh" />
+    <img src="https://drive.google.com/uc?export=view&id=1jIIUEJSms5L-gqLtpTEo_gkC0NyMbP2W" />
+    <img src="https://drive.google.com/uc?export=view&id=1jJRh4hwzIFH-wCXvKOWseiZJsWj9ZTk1" />
+  </section>
+
+  <div class="mensagem">Eu faria tudo de novo, do mesmo jeito, só pra chegar até você.</div>
+
+  <audio controls autoplay loop>
+    <source src="audio_convertido (1) (1).mp3" type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+<div class="mensagem">“As long as I'm here, no one can hurt you.”</div>
+
+  <footer>
+    Eu te amo, Simples assim 🤍
+  </footer>
+
+  <script>
+    const inicio = new Date("2025-04-27T00:00:00");
+    function atualizarContador() {
+      const agora = new Date();
+      const tempo = agora - inicio;
+
+      const dias = Math.floor(tempo / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((tempo / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((tempo / (1000 * 60)) % 60);
+      const segundos = Math.floor((tempo / 1000) % 60);
+
+      document.getElementById("contador").innerText = `Já são ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos vivendo o tipo de amor que muitos sonham em sentir só uma vez.`;
+    }
+    atualizarContador();
+    setInterval(atualizarContador, 1000);
+  </script>
+</body>
+</html>
